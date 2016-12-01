@@ -15,4 +15,13 @@
 //= require turbolinks
 //= require bootstrap
 //= require custom
+//= require bootstrap-formhelpers.min
+//= require bootstrap-select.min
+//= require bootstrap-tags.min
+//= require jquery.maskedinput.min
+//= require moment.min
+//= require jquery.bootstrap.wizard.min
+//= require bootstrap-datetimepicker
+//= require forms
+//= require bootstrap-sprockets
 //= require_tree .

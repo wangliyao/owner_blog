@@ -14,4 +14,10 @@
  *= require_self
  *= bootstrap.min
  *= styles
+ *= bootstrap-formhelpers.min
+ *= bootstrap-tags
+ *= forms
+ *= datetimepicker
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";

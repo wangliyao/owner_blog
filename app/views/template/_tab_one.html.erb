@@ -1,0 +1,48 @@
+
+<div class="col-md-6">
+  <div class="alert alert-warning" role="alert" id="flag"  style="display: none">信息未保存成功</div>
+  <div class="content-box-large">
+    <div class="panel-heading">
+      <div class="panel-title">用户设置</div>
+      <div class="panel-options">
+      </div>
+    </div>
+    <div class="panel-body">
+          <%= form_for(@name, :url => {:action => "create_name"}, :remote => true) do |f| %>
+    <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+          <div class="col-sm-10">
+           <%= f.text_field :name %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <%= f.password_field :password %>
+          </div>
+        </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+              <%= f.text_field :mail %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">是否同意</label>
+            <div class="col-sm-10">
+              <%= f.check_box :secret %>
+              <a href="#">用户需知手册</a>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <%= f.submit("保存",:class=>"btn btn-success") %>
+          </div>
+        </div>
+        <% end %>
+    </div>
+  </div>
+
+<script type="text/javascript">
+</script>

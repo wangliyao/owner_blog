@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<%= render 'head' %>
+  <body>
+    <div class="page-content">
+    	<div class="row">
+          <%= render 'options_list' %>
+		  <div class="col-md-10">
+
+            <!-- Nav tabs -->
+
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">基本信息</a></li>
+              <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">补充信息</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <%= render 'tab_one',:locals =>{:@name =>@name} %>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <%= render 'tab_two' %>
+              </div>
+            </div>
+          </div>
+
+
+	  		<!--  Page content -->
+		  </div>
+		</div>
+    </div>
+<%= render 'footer' %>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  </body>
+</html>
+<script type="text/javascript">
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>>

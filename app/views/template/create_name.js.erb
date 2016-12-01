@@ -1,0 +1,5 @@
+<% if @name.save %>
+$('#home').html("<%= escape_javascript(render :partial => "template/show_one" , locals:{:name=> @name, :flag=>'Y'})%>");
+<% else %>
+$('#flag').show()
+<% end %>

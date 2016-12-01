@@ -1,0 +1,14 @@
+development:
+  address: "smtp.163.com"
+  port: 25
+  domain: "163.com"
+  authentication: "plain" #传递方式 plain 直接传递login base64传递  cram_md5 md5 方式传递
+  user_name: "liyaowanga@163.com"
+  password: "wang1992812"
+production:
+  address: "smtp.163.com"
+  port: 25
+  domain: "163.com"
+  authentication: "plain" #传递方式 plain 直接传递login base64传递  cram_md5 md5 方式传递
+  user_name: "liyaowanga@163.com"
+  password: "wang1992812"

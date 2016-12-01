@@ -1,0 +1,32 @@
+<div class="col-md-6">
+  <% if flag.present? %>
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;
+    </span><span class="sr-only">Close</span></button>
+        数据保存成功
+      </div>
+  <% end %>
+  <div class="content-box-large">
+    <div class="panel-heading">
+      <div class="panel-title">用户设置</div>
+      <div class="panel-options">
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">注册成功</label>
+
+        <div class="col-sm-10">
+          <%= @name.name %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+</script>
