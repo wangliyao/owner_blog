@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get 'options_one'
       post 'create_name'
       post 'create_other'
+      get 'options_two'
+      get 'options_three'
     end
   end
 end

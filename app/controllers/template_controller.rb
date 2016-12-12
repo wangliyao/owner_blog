@@ -36,4 +36,10 @@ class TemplateController < ApplicationController
       format.js
     end
   end
+
+  def options_two
+  end
+
+  def options_three
+  end
 end
