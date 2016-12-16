@@ -29,6 +29,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'uuidtools'
 gem 'pry'
 
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'sidekiq'
+
+gem 'sinatra', require: false
+gem 'slim'
+
 # Use Redis adapter to run Action Cable in production
  gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

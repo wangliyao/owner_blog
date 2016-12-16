@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201063427) do
+ActiveRecord::Schema.define(version: 20161212062004) do
 
   create_table "create_a_demos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "uuid",        limit: 32
@@ -25,10 +25,14 @@ ActiveRecord::Schema.define(version: 20161201063427) do
   end
 
   create_table "create_peron_owners", id: :string, limit: 32, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string "name"
-    t.string "password"
-    t.string "secret",   limit: 2
-    t.string "mail",     limit: 22
+    t.string   "name",       limit: 32
+    t.string   "password",   limit: 32
+    t.string   "secret",     limit: 32
+    t.string   "mail",       limit: 32
+    t.string   "created_by", limit: 22
+    t.string   "updated_by", limit: 22
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "microposts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -62,6 +66,11 @@ ActiveRecord::Schema.define(version: 20161201063427) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "uuid",        limit: 32
+  end
+
+  create_table "option_list", id: :string, limit: 32, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "name"
+    t.string "child_id"
   end
 
   create_table "other_informations", id: :string, limit: 32, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

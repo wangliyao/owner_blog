@@ -1,5 +1,8 @@
 class TemplateController < ApplicationController
   def index
+    @articles = Rails.cache.fetch "articles" do
+      CreatePeronOwner.order("id DESC").limit(10).to_a
+    end
   end
 
   def options_one
@@ -10,13 +13,15 @@ class TemplateController < ApplicationController
 
   def create_name
     params.permit!
+    begin
     @name = CreatePeronOwner.new(params[:create_peron_owner])
-    if params[:create_peron_owner][:mail].present?
-      UserMailer.send_mail(params[:create_peron_owner][:mail],params[:create_peron_owner][:name]).deliver
+    if @name.save
+      respond_to do |format|
+        format.js
+      end
+    else
+      raise "有错"
     end
-    @name.save
-    respond_to do |format|
-      format.js
     end
   end
 
@@ -41,5 +46,6 @@ class TemplateController < ApplicationController
   end
 
   def options_three
+     
   end
 end

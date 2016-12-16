@@ -12,6 +12,10 @@ Rails.application.routes.draw do
       get 'options_three'
     end
   end
+
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
 
 
